@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: auto;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(lightblue, white);
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    margin: 5% auto;
+}
+
+h1:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    transition-duration: 0.5s;
+}
+
+.calculator {
+    width: 40%;
+    height: auto;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    padding: 20px;
+}
+
+.display {
+    width: 100%;
+}
+
+.display input {
+    width: 100%;
+    padding: 20px;
+    margin: 10px auto;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: right;
+    font-size: 30px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto auto  ;
+    row-gap: 20px;
+}
+
+.buttons input[type="button"] {
+    width: 50%;
+    height: 100%;
+    padding: 17px;
+    color: white;
+    background: transparent;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons input[type="button"]:hover {
+    box-shadow: 0 8px 25px grey;
+    transition: ease;
+    transition-duration: 0.25s;
+}
+
+.buttons input[type="button"]#equal {
+    grid-row: span 2;
+    background-color: orange;
+}
+
+.buttons input[type="button"]#zero {
+    width: 100%;
+    grid-column: span 2;
+}
