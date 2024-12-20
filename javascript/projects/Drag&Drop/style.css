@@ -1,0 +1,35 @@
+body {
+    background: grey;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.cursor {
+    cursor: grabbing;
+}
+
+span,
+p {
+    font-size: 20px;
+}

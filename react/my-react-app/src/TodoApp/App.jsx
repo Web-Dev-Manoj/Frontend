@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './TodoApp/Todo.css';
-import Header from './TodoApp/Header';
-import Home from "./TodoApp/Home";
+import Header from './Header';
+import Home from "./Home";
 
 function App() {
     const [tasks, setTasks] = useState([]);
