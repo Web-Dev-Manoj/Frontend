@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Funnel+Display:wght@300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Personal Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Venkata Manoj Bhargav Maddali</h1>
+        <p>Frontend | Blockchain | GenAI</p>
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <button>Dark 🔦</button>
+        </ul>
+    </nav>
+    <div class="about" id="about">
+        <p>
+            Passionate <span>Frontend Developer</span> with over 3+ years of experience crafting visually appealing,
+            user-centric web
+            applications. Proficient in ReactJS, JavaScript, and the MERN stack, I specialize in creating scalable,
+            high-performance, and secure solutions.
+
+            In addition to frontend expertise, I have contributed to projects in Blockchain (Hyperledger) and Generative
+            AI,
+            showcasing my versatility as a developer. My open-source contributions, particularly in Hyperledger
+            Explorer,
+            reflect my commitment to innovation and collaboration.
+        </p>
+    </div>
+    <h2 id="experience" style="text-align: center;">Experience</h2>
+    <div class="experience">
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Company 1</td>
+                <td>1999 - 2000</td>
+            </tr>
+            <tr>
+                <td>Company 2</td>
+                <td>2000 - 2005</td>
+            </tr>
+        </table>
+    </div>
+    <footer id="footer">
+        <p>@copyright abc@gmail.com</p>
+    </footer>
+    <script>
+        let button = document.querySelector('button');
+
+        button.addEventListener('click', function () {
+            document.body.classList.toggle('darkandlight');
+        })
+    </script>
+</body>
+
+</html>
