@@ -42,3 +42,27 @@ const reverseStr = str => {
     return temp;
 }
 console.log(reverseStr('Saikumar'))
+
+// 6. Write a program to find the factorial of a number.
+function findFactorial(num) {
+    let fact = 1;
+    for (let i = 1; i <= num; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+console.log(findFactorial(4));
+
+// 7. Write a program to find the Fibonacci sequence up to the nth term.
+const findFibonacci = num => {
+    let temp = [];
+    let n1 = 0, n2 = 1, nextTerm;
+    for (let i = 1; i <= num; i++) {
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+        temp.push(n1);
+    }
+    return temp;
+}
+console.log(findFibonacci(10));
