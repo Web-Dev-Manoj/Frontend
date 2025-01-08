@@ -59,3 +59,10 @@ export default App;
 // if the data model changes, it should also reflect in UI.this is called one - way data binding.
 // similarly, if we / user change anything in UI, it should automatically update data model.this is called two - way data binding.
 // This can be see in elements in like input etc.
+
+//useEffect() hook:
+// ------------------
+// useEffect() is a react hook that let us perform side effects in functional component.
+// side effects includes like fetching data, updating the dom etc.
+//     syntax:
+// useEffect(callback function, [dependencies](optional));
