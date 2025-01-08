@@ -66,3 +66,21 @@ const findFibonacci = num => {
     return temp;
 }
 console.log(findFibonacci(10));
+
+// 6. Write a program to check if a number is prime.
+const checkPrime = num => {
+    let count = 0;
+    for (let i = 1; i <= num; i++) {
+        if (num % i == 0) count += 1;
+    }
+    return count === 2 ? true : false;
+}
+console.log(checkPrime(4));
+
+// 7. Write a program to print the multiplication table of a given number.
+const printTable = num => {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} * ${i} = ${num * i}`);
+    }
+}
+printTable(10);
