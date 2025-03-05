@@ -1,6 +1,8 @@
 let panels = document.querySelectorAll('.panel');
 // place all the elements with panel into a nodeList
 
+console.log(panels);
+
 const removeActiveClasses = () => {
     panels.forEach((panel) => {
         panel.classList.remove('active')
