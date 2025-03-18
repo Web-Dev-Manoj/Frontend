@@ -1,0 +1,65 @@
+ReactJS
+-------
+ReactJS is a javascript Library used for building User Interfaces (UI), primarily Single Page Applications (SPA's).
+ReactJS is Declarative, efficient and flexible JS library for bulding Reusable Components.
+also, it is a component-based architecture i.e.., UI is broken down into individual reusable components.
+
+First version -> released in 29th May 2013.
+Developed by 'Jordan walke', who is a developer at Facebook.
+
+Why ReactJS, when JS is available?
+----------------------------------
+Normal Javascript makes code complex as the application grows.
+also, Managing UI updates, state changes and DOM Interactions becomes difficult.
+ReactJS can be used to overcome these issues, with the help of features like Hooks, State, Props, Virtual DOM etc.
+
+ReactJS features:
+-----------------
+1. Virtual DOM
+2. Declarative UI
+3. Component based architecture
+4. One way data binding
+5. JSX 
+6. Code Maintainability and Reusability
+7. Community and Eco-system - maintained by bunch of dev's from facebook
+
+Virtual DOM:
+------------
+Virtual DOM is nothing but a light weight copy of actual DOM that react manages in memory.
+Instead of updating real DOM,
+ReactJS updates the virtual DOM first, compares with the previous DOM version, updates only the changed parts in real DOM.
+virtual DOM phases:
+1. Render phase
+2. Differ phase
+3. update phase
+Why Virtual DOM?
+1. Minimizes Direct DOM Manipulation
+2. Efficient Differing Algorithm
+3. Batch updates for performance - updates all changes at once, instead of rerendering
+
+'simply, it only loads individual modified DOM element, instead of loading entire DOM'
+
+Build Process:
+--------------
+The code which we write is not the code that gets executed in the browser in reactjs.
+instead, it get transformed before it runs in the browser.
+React build process is set of steps that transforms react code(JSX, ES6+) into optimized, production-ready version that browser can efficiently executes.
+
+it involves compiling, building and optimizing with the help of tools like babel, webpack and react-scripts.
+
+Build process steps:
+1. Transilation - [jsx to js] - uses babel
+2. Module building - [combines, src, assets etc into single entity] - uses webpack
+3. optimization
+4. Generating static assets - [components to html+css+js]
+5. Code splitting and lazy loading
+
+Reconciliation:
+---------------
+Reconciliation is the process of comparing virtual DOM with real DOM and updating only the necessary parts.
+React uses 'diffi algorithm' internally.
+
+Transilation:
+-------------
+Transilation is the process of converting react based syntax like JSX, ES6+ etc into Older version of JS code, so that browser can understand.
+React uses babel tool for this process.
