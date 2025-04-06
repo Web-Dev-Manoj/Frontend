@@ -8,7 +8,13 @@ import React from 'react';
 // 1. Component name should start with Capital case.
 // 2. should return atleast and atmost one jsx Element.
 
-const name = 'Manoj';
+// -> what happens if i use small
+// Ans.it won't throw any error. but, then React, doesn't treat that as a component, instead it treats as a normal html element.
+// function app() {
+//     return <h1>Hello world</h1>
+// }
+
+const name = "Saikumar";
 
 function App() {
     return (
@@ -24,6 +30,8 @@ function App() {
             make sure to include forward slash, if we use self-closing
             underhood, React runs that function
             */}
+            <Footer name="Manoj" color='red' /> {/* we can use the same components multiple times, with different data with the help of props */}
+            <Footer name="Bhargav" color='green' />
         </div>);
 }
 
@@ -37,7 +45,6 @@ function App() {
 //         <h2>This is heading2</h2>
 // }❌
 // correct approach:✅
-
 export function Header() {
     return (
         <div>
@@ -46,13 +53,19 @@ export function Header() {
         </div>
     )
 }
-
-
-// -> what happens if i use small
-// Ans.it won't throw any error. but, then React, doesn't treat that as a component, instead it treats as a normal html element.
-// function app() {
-//     return <h1>Hello world</h1>
+// props:
+// ------
+// 1. approach 1: using props
+// export function Footer(props) {
+//     return <p>Hi {props.name}, this is footer</p>
 // }
+
+// 2. approach 2: using props destructuring
+export function Footer({ name, color }) { // while destructing, the attribute names should be same. else, it will not hold any value
+    // here instead of name, if you give firstname or anyother name, it will be empty
+    return <p style={{ color: color }}> Hi {name}, this is footer</p >;
+    // we can also use dynamic approach for assigning attribute values.
+}
 
 export { App }; // named exports should be exported inside curly braces {}
 // can export as default also:

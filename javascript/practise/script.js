@@ -1,16 +1,40 @@
-// what is Javascript?
-// -------------------
-// Javascript is a highlevel, interpreted programming language used to make web pages interactive.
-// Javascript is a 'multi paradigm' programming language supporting functional and object oriented programming styles.
+// console.log('Hello world');
 
-// Javascript runs in browser, but, it can also runs in server side with env's like Nodejs.
+// XMLHttpRequest
+const rqst = new XMLHttpRequest();
+rqst.open('GET', 'https://restcountries.com/v3.1/name/eesti');
+rqst.send();
 
-// History:
-// --------
-// Javascipt was invented by 'Brenden Eich'(engineer in netscape) in 1995.
-// Became ECMA standard in 1997.
-// ES6 -> with major updates -> release in 2015
+rqst.addEventListener('load', () => {
+    let [data] = JSON.parse(rqst.responseText);
+    console.log(data);
+    console.log('The country is ' + data.name.common)
 
-// ECMA -> European Computers Manfacturers Assosiation.
+    let neighbors = [...data.borders];
 
-// Mocha -> Livescript -> Javascript -> ECMAScript
+    console.log('The borders informations is: ')
+    for (let i = 0; i < neighbors.length; i++) {
+        console.log(neighbors[i])
+        const rqst2 = new XMLHttpRequest();
+        rqst2.open('GET', `https://restcountries.com/v3.1/alpha/${neighbors[i]}`);
+        rqst2.send();
+        rqst2.addEventListener('load', () => {
+            let [neighbors_data] = JSON.parse(rqst2.responseText);
+            console.log(neighbors_data.name.common);
+        })
+    }
+})
+
+
+// fetchAPI
+let apicall = fetch('https://restcountries.com/v3.1/name/eesti')
+    .then((response) => response.json())
+    // .then((data) => console.log(data[0].borders[0]));
+    .then((data) => {
+        for (let i = 0; i < data[0].borders.length; i++) {
+            fetch(`https://restcountries.com/v3.1/alpha/${data[0].borders[i]}`)
+                .then((response) => response.json())
+                .then(data => console.log(data[0].name.common)); // The returned value is the fulfilled value of a promise.
+        }
+    })
+console.log(apicall)
