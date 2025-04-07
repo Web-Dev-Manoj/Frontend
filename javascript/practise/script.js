@@ -35,6 +35,7 @@ let apicall = fetch('https://restcountries.com/v3.1/name/eesti')
             fetch(`https://restcountries.com/v3.1/alpha/${data[0].borders[i]}`)
                 .then((response) => response.json())
                 .then(data => console.log(data[0].name.common)); // The returned value is the fulfilled value of a promise.
+            //
         }
     })
 console.log(apicall)
