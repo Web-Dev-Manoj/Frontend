@@ -2,26 +2,32 @@
 // JAVASCRIPT
 // ----------
 
-console.log(`Javascript is highlevel, interpretered programming language, used to make webpages interactive.`)
-console.log(`Javascript is also multiparadigm language, supporting functional, object oriented programming styles.`)
+console.log(`Javascript is highlevel, interpretered programming language, used to make webpages interactive. Javascript is also multiparadigm language, supporting functional, object oriented programming styles.`);
 
-// Founded - Brenden Eich, 1995.
-// Became ECMA standard - 1997 [European Computers Manfacturers Association]
-// 2015 - Major update - ES6+ released.
+console.log(`
+Founded - Brenden Eich, 1995.
+Became ECMA standard - 1997 [European Computers Manfacturers Association]
+2015 - Major update - ES6+ released.`);
 
 // HTML - used to define content of a web page
 // CSS - used to define style of a web page
 // JS - used to define behaviour of a web page
 
-console.log(`Evolution of JS name : Mocha -> Livescript -> Javascript(after netscape was acquired by Sun microsystems) -> ECMAscript`)
+console.log(`Evolution of JS name : Mocha -> Livescript -> Javascript(after netscape was acquired by Sun microsystems) -> ECMAscript`);
 
-// Key Features of JS:
-// 1. Dynamic
-// 2. Object - Oriented
-// 3. Asynchronous Programming
-// 4. Cross platform
-// 5. First class functions - functions are treated as any other variables
-// 6. Event driven
+console.log(`
+Key Features of JS:
+1. Dynamic
+2. Object - Oriented
+3. Asynchronous Programming
+4. Cross platform
+5. First class functions - functions are treated as any other variables
+6. Event driven`);
+
+console.log(`Functional Programming vs OOP:
+    -> Functional Programming is a programming style where programs are built using first class functions, immutability and function compositions.
+    -> where as OOP paradigm is a programming style that structure code using objects, that contains properties and methods.
+    `)
 
 // What Javascript can do?
 // 1. Javascript can change HTML content
@@ -204,6 +210,43 @@ const print2 = () => {
     console.log(this);
 }
 print2();
+
+
+console.log(`
+    Clousers:
+    ---------
+    Closures allows a function to 'remember' variables of scope in which it is defined, even after that scope has finished execution.
+    eg:
+    function x(){
+    let a=20;
+        function b(){
+            return a;
+        }
+        return y;
+    }
+    let z=x(); // return function y;
+    console.log(z()); // return value of a // 20
+    `)
+
+console.log(`
+    Promises:
+    ---------
+    Promises in javascript is an object that represents eventual completion/rejection of asynchronous operation and its resulting value.
+    `)
+
+
+function fetchData() {
+    const prom1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const success = false;
+            success ? resolve('Success') : reject('Failure');
+        }, 10);
+    });
+    console.log(prom1);
+    return prom1;
+}
+
+fetchData().then(data => console.log(data)).catch((error) => console.log(error));
 
 
 
