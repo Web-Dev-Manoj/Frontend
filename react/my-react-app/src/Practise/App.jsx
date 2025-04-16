@@ -93,7 +93,7 @@ import React from 'react';
 
 // CONDITIONAL RENDERING:
 // ----------------------
-// conditional rendering is nothing but displaying different UI's based on the conditions like, state, props and logic.
+// conditional rendering is nothing but displaying different UI's based on the conditions like state, props and logic.
 // this work same as conditions in native javascript.
 
 // LIST & KEYS:
@@ -188,6 +188,7 @@ import React from 'react';
 // where as, uncontrolled components are components where form data is handled by DOM itself using ref's
 
 // REACT HOOKS:
+// ------------
 // Hooks are the functions that allows us to use some react features in functional components.
 // simply, Hooks allow functional components to manage state changes and side effects without using class components.
 
@@ -203,7 +204,7 @@ import React from 'react';
 // useContext() -> useContext Hook is used to manage global data in our react application.
 // There are mainly three steps: 1.) creating the context 2.) providing the context 3.) consuming the context
 
-// useRef() -> useRef Hook allows us to access DOM elements and also allow us to create mutable variables that cause rerenders.
+// useRef() -> useRef Hook allows us to access DOM elements and also allow us to create mutable variables that won't cause rerenders.
 
 // useMemo() -> useMemo() is used to apply memotization in react.
 

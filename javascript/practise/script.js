@@ -232,21 +232,43 @@ console.log(`
     Promises:
     ---------
     Promises in javascript is an object that represents eventual completion/rejection of asynchronous operation and its resulting value.
-    `)
-
-
-function fetchData() {
+    eg:
+    function fetchData() {
     const prom1 = new Promise((resolve, reject) => {
         setTimeout(() => {
-            const success = false;
+            const success = true;
             success ? resolve('Success') : reject('Failure');
         }, 10);
     });
-    console.log(prom1);
+    setTimeout(() => {
+        console.log(prom1);
+    }, 5000)
     return prom1;
 }
+    `)
 
-fetchData().then(data => console.log(data)).catch((error) => console.log(error));
+function addNumbers(a, b) {
+    return new Promise((resolve, reject) => {
+        if (typeof a === "number" && typeof b === "number") {
+            resolve(((a, b) => {
+                let mul = a * b;
+                return mul;
+            })(a, b));
+        } else {
+            reject("Both inputs must be numbers.");
+        }
+    });
+}
+
+// Using the promise
+addNumbers(5, 10)
+    .then(result => {
+        console.log("Result:", result);  // Output: Result: 15
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+
 
 
 
