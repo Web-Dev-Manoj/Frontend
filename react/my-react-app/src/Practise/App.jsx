@@ -5,7 +5,7 @@ import React from 'react';
 // ------
 // ReactJS is a javascript library for building Interactive UI. especially, SPA's(Single page applications).
 // It allows developers to build large applications that can update and render efficiently, in response to the data changes.
-// simply, ReactJS is declarative, efficient and flexible library for bulding reusable components.
+// simply, ReactJS is declarative, efficient and flexible library for building reusable components.
 
 // WHY REACTJS:
 // ------------
@@ -67,7 +67,7 @@ import React from 'react';
 // PROPS:
 // ------
 // props are read-only values passed from parent to child components. simply, these are inputs to our components.
-// props allows use reuse the same component with different versions of data.
+// props allows us to reuse the same component with different versions of data.
 // also, these are immutable. we cannot change values inside child components.
 // eg: <Header name="heading1" />
 // these props will be passed as read-only objects, and can be accessed in many ways(using props. , destructuring etc)
